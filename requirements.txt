@@ -1,0 +1,41 @@
+# ─── TAD Sleep Staging — Python Requirements ──────────────────────────────
+# Install with:  pip install -r requirements.txt
+#
+# PyTorch: install separately via https://pytorch.org/get-started/locally/
+# to get the right CUDA version for your GPU. Example (CPU-only):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# Example (CUDA 12.1):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# ─── Deep learning ────────────────────────────────────────────────────────
+# torch>=2.1.0          # install separately — see note above
+# torchvision>=0.16.0   # install separately
+# torchaudio>=2.1.0     # install separately
+
+# ─── Scientific computing ─────────────────────────────────────────────────
+numpy>=1.24.0
+scipy>=1.10.0
+
+# ─── Machine learning / evaluation ───────────────────────────────────────
+scikit-learn>=1.2.0
+
+# ─── EEG / biosignal processing ──────────────────────────────────────────
+mne>=1.4.0          # EDF file reading, channel extraction, annotation parsing
+pyedflib>=0.1.28    # fallback EDF support
+
+# ─── Visualisation ────────────────────────────────────────────────────────
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ─── Progress bars ────────────────────────────────────────────────────────
+tqdm>=4.65.0
+
+# ─── Presentation generation (optional — only needed for slide scripts) ───
+# pptxgenjs is a Node.js package, not pip:
+#   npm install -g pptxgenjs
+# The Python slide scripts call it via subprocess.
+# If you only want the Python pipeline, you can skip this.
+python-pptx>=0.6.21   # alternative if using pure Python slides
+
+# ─── Utilities ────────────────────────────────────────────────────────────
+Pillow>=9.5.0         # image cropping for slide generation
